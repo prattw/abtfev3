@@ -90,7 +90,7 @@ function App(props) {
         <h3>Napa, CA</h3>
       </div>
 
-      <Link to="/new"><button style={button}>Help us decide on our best label!</button></Link>
+      <Link to="/new"><button style={button}>Help us decide on our next best label!</button></Link>
         <Switch>
         <Route
           exact

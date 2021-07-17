@@ -28,10 +28,11 @@ const Form = ({initialComments, history, handleSubmit, buttonLabel}) => {
 
     <form onSubmit={handleSubmission}>
         <div class="row">
-            <img src="https://i.imgur.com/vQsDnaSl.png" alt="wine a" class="center"></img>
-            <img src="https://i.imgur.com/3y4oKy0l.png" alt="wine b" class="center"></img>
+            <img src="https://i.imgur.com/vQsDnaSm.png" alt="wine a" class="center flex-grow md:flex-grow-0"></img>
+            <img src="https://i.imgur.com/3y4oKy0m.png" alt="wine b" class="center md:flex-grow-0"></img>
         </div>
         <div class="column">
+          <div class="text-center">
             <label for="name">Let us know where to send invites for future Cuvaison events</label>
             <input
                 style={input}
@@ -42,15 +43,22 @@ const Form = ({initialComments, history, handleSubmit, buttonLabel}) => {
                 text="email"
             />
             <label for="comments">Which label do you like the best?</label>
-            <input
+            {/* <input
                 style={input}
                 type="text"
                 onChange={handleChange}
                 value={formData.comments}
                 name="comments"
-            />
+            /> */}
+            <select name="comments" style={input} type="text" onChange={handleChange} value={formData.comments}>
+              <option value="a">A</option>
+              <option value="b">B</option>
+            </select>
+          </div>
         </div>
+      <div class="text-center">
         <input type="submit" value={buttonLabel} />
+      </div>
     </form>
   );
 };
